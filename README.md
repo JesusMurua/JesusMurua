@@ -1,4 +1,4 @@
-# Hi, I'm Jesús Murua 👋
+# Hi, I'm Jesús Murúa 👋
 
 **Senior Full-Stack Developer & UI/UX** based in Hermosillo, Mexico.
 10 years building enterprise systems and SaaS products — backend, frontend, and design, end to end.
