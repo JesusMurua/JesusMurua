@@ -42,35 +42,9 @@ sole developer.
 
 **How it fits together**
 
-```mermaid
-flowchart LR
-  subgraph vercel["Vercel"]
-    POS["POS app · PWA<br/>Angular 22 · Dexie offline"]
-    ADMIN["Operations console<br/>Angular 22"]
-    WEB["finomx.app<br/>Next.js"]
-  end
-  BRIDGE["Print bridge<br/>.NET Windows service"]
-  subgraph render["Render · Docker"]
-    API["REST API + SignalR<br/>.NET 10 · EF Core"]
-  end
-  DB[("PostgreSQL<br/>Supabase")]
-  PAY["Stripe · MercadoPago · Clip"]
-  DELIVERY["Uber Eats · Rappi · DiDi Food"]
-  MAIL["Resend<br/>email"]
-  POS -- "REST + real time" --> API
-  ADMIN --> API
-  WEB --> API
-  BRIDGE -- "print jobs" --> API
-  API --> DB
-  API <--> PAY
-  DELIVERY -- "webhooks" --> API
-  API --> MAIL
-  subgraph ci["GitHub Actions · self-hosted runners"]
-    SHARED["Shared contracts<br/>tests both sides run · CI gates"]
-  end
-  ci -. "deploy" .-> render
-  ci -. "deploy" .-> vercel
-```
+<p align="center">
+  <img src="assets/fino-architecture.png" width="100%" alt="How Fino fits together: the business app, the admin console and the marketing site on Vercel, and a Windows print bridge, talk to the Fino API (.NET 10 on Render with Docker), which uses PostgreSQL on Supabase, Stripe, Mercado Pago and Clip for payments, receives Uber Eats, Rappi and DiDi Food orders by webhook, and sends email through Resend; CI/CD runs on GitHub Actions with shared contract tests, and Cloudflare serves DNS and email routing">
+</p>
 
 **How it's engineered**
 
