@@ -18,7 +18,13 @@ sole developer.
 **[finomx.app](https://finomx.app)** · **[app.finomx.app](https://app.finomx.app)**
 
 <p align="center">
+  <img src="assets/fino-restaurant.gif" width="760" alt="Fino's restaurant hub: the floor map with every table state, reception with today's reservations and waitlist, a delivery order accepted, and a table paying a split bill in cash and card with tip">
+  <br><sub>The restaurant hub: floor, reception, delivery, and a table paying a split bill (cash + card, with tip)</sub>
+</p>
+
+<p align="center">
   <img src="assets/fino-pos.gif" width="300" alt="Fino point of sale on a phone: pick two products, choose a size, charge, change due">
+  <br><sub>The counter on a phone: two products, a size, charge, change due</sub>
 </p>
 
 **What it does**
