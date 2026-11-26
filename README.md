@@ -48,7 +48,7 @@ sole developer.
 
 **How it's engineered**
 
-- Six repositories — API, POS app, operations console, marketing site, Windows bridge and a shared repo whose
+- Six repositories — API, business app, admin console, marketing site, Windows bridge and a shared repo whose
   **contract tests both client and server run**, so a rule that lives on both sides cannot drift apart
 - Integration tests against a real PostgreSQL, Angular unit tests, Playwright end-to-end flows and mutation testing
 - Custom CI gates that block regressions before merge, including query-count limits that catch N+1 queries
